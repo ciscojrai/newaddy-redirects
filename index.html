@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>newaddy · redirecting</title>
+  <link rel="canonical" href="https://newaddy.ai/" />
+  <link rel="icon" href="assets/logo-floating.png" type="image/png" />
+  <script>
+    (function () {
+      var host = (location.hostname || "").toLowerCase();
+      var map = {
+        "app.newaddy.ai": "app.html",
+        "www.app.newaddy.ai": "app.html",
+        "blog.newaddy.ai": "blog.html",
+        "www.blog.newaddy.ai": "blog.html",
+        "live.newaddy.ai": "live.html",
+        "www.live.newaddy.ai": "live.html",
+        "shop.newaddy.ai": "shop.html",
+        "www.shop.newaddy.ai": "shop.html",
+        "store.newaddy.ai": "store.html",
+        "www.store.newaddy.ai": "store.html"
+      };
+      var page = map[host];
+      if (page) location.replace(page + location.search + location.hash);
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="stage">
+    <img class="logo" src="assets/logo-floating.png" alt="newaddy" width="168" height="184" />
+    <p class="msg">hi!! redirect in process to <a href="https://newaddy.ai/">newaddy.ai</a></p>
+    <div class="spin" aria-hidden="true"></div>
+  </main>
+  <script>
+    setTimeout(function () { location.replace("https://newaddy.ai/"); }, 2500);
+  </script>
+</body>
+</html>

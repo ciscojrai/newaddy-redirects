@@ -1,0 +1,34 @@
+[build]
+  publish = "."
+
+# Host-based splash pages. Add each custom domain in Netlify → Domain management
+# then this file maps hostname → the right video page without changing the URL.
+[[redirects]]
+  from = "/"
+  to = "/app.html"
+  status = 200
+  conditions = { Host = ["app.newaddy.ai", "www.app.newaddy.ai"] }
+
+[[redirects]]
+  from = "/"
+  to = "/blog.html"
+  status = 200
+  conditions = { Host = ["blog.newaddy.ai", "www.blog.newaddy.ai"] }
+
+[[redirects]]
+  from = "/"
+  to = "/live.html"
+  status = 200
+  conditions = { Host = ["live.newaddy.ai", "www.live.newaddy.ai"] }
+
+[[redirects]]
+  from = "/"
+  to = "/shop.html"
+  status = 200
+  conditions = { Host = ["shop.newaddy.ai", "www.shop.newaddy.ai"] }
+
+[[redirects]]
+  from = "/"
+  to = "/store.html"
+  status = 200
+  conditions = { Host = ["store.newaddy.ai", "www.store.newaddy.ai"] }
