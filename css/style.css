@@ -33,13 +33,14 @@ body {
 
 .brand {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
 }
 
 .logo {
-  width: min(168px, 42vw);
+  width: 48px;
   height: auto;
   display: block;
   animation: float 2.8s ease-in-out infinite;
@@ -47,7 +48,7 @@ body {
 }
 
 .wordmark {
-  width: min(220px, 72vw);
+  width: min(200px, 58vw);
   height: auto;
   display: block;
 }
