@@ -1,34 +1,65 @@
 [build]
   publish = "."
 
-# Host-based splash pages. Add each custom domain in Netlify → Domain management
-# then this file maps hostname → the right video page without changing the URL.
+# newaddy.ai is the destination (FavAtlas). Do not attach it here or the splash loops.
+# Attach the TLD aliases below in Netlify → Domain management.
+
 [[redirects]]
   from = "/"
   to = "/app.html"
   status = 200
-  conditions = { Host = ["app.newaddy.ai", "www.app.newaddy.ai"] }
+  conditions = { Host = ["newaddy.app", "www.newaddy.app", "newaaddy.app", "www.newaaddy.app"] }
 
 [[redirects]]
   from = "/"
   to = "/blog.html"
   status = 200
-  conditions = { Host = ["blog.newaddy.ai", "www.blog.newaddy.ai"] }
+  conditions = { Host = ["newaddy.blog", "www.newaddy.blog", "newaaddy.blog", "www.newaaddy.blog"] }
 
 [[redirects]]
   from = "/"
   to = "/live.html"
   status = 200
-  conditions = { Host = ["live.newaddy.ai", "www.live.newaddy.ai"] }
+  conditions = { Host = ["newaddy.live", "www.newaddy.live", "newaaddy.live", "www.newaaddy.live"] }
 
 [[redirects]]
   from = "/"
   to = "/shop.html"
   status = 200
-  conditions = { Host = ["shop.newaddy.ai", "www.shop.newaddy.ai"] }
+  conditions = { Host = ["newaddy.shop", "www.newaddy.shop", "newaaddy.shop", "www.newaaddy.shop"] }
 
 [[redirects]]
   from = "/"
   to = "/store.html"
   status = 200
-  conditions = { Host = ["store.newaddy.ai", "www.store.newaddy.ai"] }
+  conditions = { Host = ["newaddy.store", "www.newaddy.store", "newaaddy.store", "www.newaaddy.store"] }
+
+[[redirects]]
+  from = "/"
+  to = "/al-app.html"
+  status = 200
+  conditions = { Host = ["addylife.app", "www.addylife.app"] }
+
+[[redirects]]
+  from = "/"
+  to = "/al-biz.html"
+  status = 200
+  conditions = { Host = ["addylife.biz", "www.addylife.biz"] }
+
+[[redirects]]
+  from = "/"
+  to = "/al-online.html"
+  status = 200
+  conditions = { Host = ["addylife.online", "www.addylife.online"] }
+
+[[redirects]]
+  from = "/"
+  to = "/al-site.html"
+  status = 200
+  conditions = { Host = ["addylife.site", "www.addylife.site"] }
+
+[[redirects]]
+  from = "/"
+  to = "/al-store.html"
+  status = 200
+  conditions = { Host = ["addylife.store", "www.addylife.store"] }

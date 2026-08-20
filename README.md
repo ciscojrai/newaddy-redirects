@@ -1,72 +1,51 @@
 # newaddy-redirects
 
-Splash pages for five domains. Each plays a short branded video, then sends the visitor to [newaddy.ai](https://newaddy.ai/).
+WIP splash for every Newaddy and AddyLife TLD. Each plays a short clip, then
+sends the visitor to **https://newaddy.ai/** (FavAtlas will live there).
 
-| File | Video | Point this hostname at the Netlify site |
+**Do not attach `newaddy.ai` to this Netlify site.** That hostname is the
+destination. This site only holds the other TLDs.
+
+## Newaddy
+
+| Host | Page | Video |
 |---|---|---|
-| `app.html` | `NA-app6sec.mp4` | `app.newaddy.ai` |
-| `blog.html` | `NA-blog.mp4` | `blog.newaddy.ai` |
-| `live.html` | `NA-live.mp4` | `live.newaddy.ai` |
-| `shop.html` | `NA-shop.mp4` | `shop.newaddy.ai` |
-| `store.html` | `NA-store.mp4` | `store.newaddy.ai` |
+| newaddy.app | `app.html` | NA-app6sec.mp4 |
+| newaddy.blog | `blog.html` | NA-blog.mp4 |
+| newaddy.live | `live.html` | NA-live.mp4 |
+| newaddy.shop | `shop.html` | NA-shop.mp4 |
+| newaddy.store | `store.html` | NA-store.mp4 |
 
-White background, floating logo, copy: **hi!! redirect in process to newaddy.ai**. Video autoplays muted. Redirects when the video ends, or after 10 seconds, whichever comes first.
+Also mapped: `newaaddy.*` (double-a spelling).
 
-Videos and `logo-floating.png` are already in `assets/`.
+## AddyLife
 
-## 1. GitHub
+| Host | Page | Video |
+|---|---|---|
+| addylife.app | `al-app.html` | AL-app5sec.mp4 |
+| addylife.biz | `al-biz.html` | AL-online.mp4 (no dedicated .biz clip) |
+| addylife.online | `al-online.html` | AL-online.mp4 |
+| addylife.site | `al-site.html` | AL-site.mp4 |
+| addylife.store | `al-store.html` | AL-store.mp4 |
 
-```bash
-cd /Users/ciscomacbook/Documents/Claude/Projects/newaddy-redirects
-git init
-git add .
-git commit -m "Splash redirects to newaddy.ai"
-gh repo create newaddy-redirects --public --source=. --remote=origin --push
-```
+White background, floating logo, copy: **hi!! redirect in process to newaddy.ai**.
+Video autoplays muted. Redirects when the clip ends, or after 10 seconds.
 
-Or create `newaddy-redirects` empty on github.com, then:
+Repo: https://github.com/ciscojrai/newaddy-redirects
 
-```bash
-git remote add origin git@github.com:YOURUSER/newaddy-redirects.git
-git branch -M main
-git push -u origin main
-```
+## Deploy
 
-## 2. Netlify
-
-1. [app.netlify.com](https://app.netlify.com) → **Add new site** → **Import an existing project**
-2. Pick the `newaddy-redirects` repo
-3. Build settings: leave **Build command** empty, **Publish directory** `.`
-4. Deploy
-
-## 3. Point the five domains
-
-In Netlify → **Domain management** → **Add domain alias** for each:
-
-- `app.newaddy.ai`
-- `blog.newaddy.ai`
-- `live.newaddy.ai`
-- `shop.newaddy.ai`
-- `store.newaddy.ai`
-
-DNS (at your registrar), for each hostname:
+1. Netlify → Import `ciscojrai/newaddy-redirects`
+2. Publish directory `.` · no build command
+3. Domain management → add every host in the tables above
+4. DNS at the registrar, for each hostname:
 
 ```
-CNAME  app    <your-site>.netlify.app
-CNAME  blog   <your-site>.netlify.app
-CNAME  live   <your-site>.netlify.app
-CNAME  shop   <your-site>.netlify.app
-CNAME  store  <your-site>.netlify.app
+CNAME  @    <your-site>.netlify.app     # only if the DNS host allows CNAME flattening
 ```
 
-If a hostname is an **apex** (example.com, no subdomain), use Netlify’s A/AAAA/ALIAS records instead of CNAME.
+Apex TLDs (`.app`, `.blog`, `.live`, `.shop`, `.store`, `.biz`, `.online`, `.site`)
+usually need **Netlify DNS** or an ALIAS/ANAME. A raw CNAME on apex is often
+blocked. Easiest: add the domain in Netlify and use the nameservers they give you.
 
-`netlify.toml` already maps those hosts to the matching HTML. If your real hostnames differ, edit the `Host` lists there and the map in `index.html`.
-
-## Check
-
-Open `app.html` locally, or after deploy:
-
-- Logo bobs on white
-- Video starts (muted — browsers block unmuted autoplay)
-- After the clip (or 10s) you land on https://newaddy.ai/
+If a hostname is not in the table, edit `netlify.toml` and the map in `index.html`.

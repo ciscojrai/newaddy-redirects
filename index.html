@@ -10,16 +10,36 @@
     (function () {
       var host = (location.hostname || "").toLowerCase();
       var map = {
-        "app.newaddy.ai": "app.html",
-        "www.app.newaddy.ai": "app.html",
-        "blog.newaddy.ai": "blog.html",
-        "www.blog.newaddy.ai": "blog.html",
-        "live.newaddy.ai": "live.html",
-        "www.live.newaddy.ai": "live.html",
-        "shop.newaddy.ai": "shop.html",
-        "www.shop.newaddy.ai": "shop.html",
-        "store.newaddy.ai": "store.html",
-        "www.store.newaddy.ai": "store.html"
+        "newaddy.app": "app.html",
+        "www.newaddy.app": "app.html",
+        "newaaddy.app": "app.html",
+        "www.newaaddy.app": "app.html",
+        "newaddy.blog": "blog.html",
+        "www.newaddy.blog": "blog.html",
+        "newaaddy.blog": "blog.html",
+        "www.newaaddy.blog": "blog.html",
+        "newaddy.live": "live.html",
+        "www.newaddy.live": "live.html",
+        "newaaddy.live": "live.html",
+        "www.newaaddy.live": "live.html",
+        "newaddy.shop": "shop.html",
+        "www.newaddy.shop": "shop.html",
+        "newaaddy.shop": "shop.html",
+        "www.newaaddy.shop": "shop.html",
+        "newaddy.store": "store.html",
+        "www.newaddy.store": "store.html",
+        "newaaddy.store": "store.html",
+        "www.newaaddy.store": "store.html",
+        "addylife.app": "al-app.html",
+        "www.addylife.app": "al-app.html",
+        "addylife.biz": "al-biz.html",
+        "www.addylife.biz": "al-biz.html",
+        "addylife.online": "al-online.html",
+        "www.addylife.online": "al-online.html",
+        "addylife.site": "al-site.html",
+        "www.addylife.site": "al-site.html",
+        "addylife.store": "al-store.html",
+        "www.addylife.store": "al-store.html"
       };
       var page = map[host];
       if (page) location.replace(page + location.search + location.hash);
