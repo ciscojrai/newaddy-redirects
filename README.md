@@ -4,7 +4,9 @@ WIP splash for every Newaddy and AddyLife TLD. Each plays a short clip, then
 sends the visitor to **https://newaddy.ai/** (FavAtlas will live there).
 
 **Do not attach `newaddy.ai` to this Netlify site.** That hostname is the
-destination. This site only holds the other TLDs.
+globe (FavAtlas → Newaddy) at the `favatlas` Netlify project. This splash
+site only holds the other TLDs. If `.ai` is added here, visitors never
+reach the map.
 
 ## Newaddy
 
