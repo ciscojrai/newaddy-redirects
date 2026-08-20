@@ -1,5 +1,11 @@
 (function () {
-  var DEST = "https://newaddy.ai";
+  var host = (location.hostname || "").toLowerCase();
+  var meta = document.querySelector('meta[name="redirect-dest"]');
+  var DEST =
+    (meta && meta.getAttribute("content")) ||
+    (host.indexOf("addylife") !== -1
+      ? "https://addylife.netlify.app/"
+      : "https://newaddy.ai/");
   var FALLBACK_MS = 10000;
   var sent = false;
 

@@ -1,12 +1,18 @@
 # newaddy-redirects
 
-WIP splash for every Newaddy and AddyLife TLD. Each plays a short clip, then
-sends the visitor to **https://newaddy.ai/** (FavAtlas will live there).
+WIP splash for Newaddy and AddyLife TLDs. Each plays a short clip, then
+sends the visitor to the matching site:
+
+- **Newaddy** TLDs → **https://newaddy.ai/** (FavAtlas globe — site 1)
+- **AddyLife** TLDs → **https://addylife.netlify.app/** (chat + globe — site 2)
 
 **Do not attach `newaddy.ai` to this Netlify site.** That hostname is the
-globe (FavAtlas → Newaddy) at the `favatlas` Netlify project. This splash
-site only holds the other TLDs. If `.ai` is added here, visitors never
-reach the map.
+Newaddy globe at the `favatlas` Netlify project. If `.ai` is added here,
+visitors never reach the map.
+
+**Do not attach `addylife.netlify.app` here either** — that is the AddyLife
+app. Splash stays on the AddyLife TLDs so the clip can play first, then
+the visitor lands on AddyLife (not Newaddy).
 
 ## Newaddy
 
@@ -30,7 +36,11 @@ Also mapped: `newaaddy.*` (double-a spelling).
 | addylife.site | `al-site.html` | AL-site.mp4 |
 | addylife.store | `al-store.html` | AL-store.mp4 |
 
-White background, floating pin + **newaddy.ai** wordmark, copy: **hi!! redirect in process to newaddy.ai**.
+White background, floating pin + wordmark.
+
+- Newaddy pages: **newaddy.ai** wordmark, copy **hi!! redirect in process to newaddy.ai**.
+- AddyLife pages: **AddyLife** wordmark, copy **hi!! redirect in process to AddyLife**.
+
 Video autoplays muted. Redirects when the clip ends, or after 10 seconds.
 
 Repo: https://github.com/ciscojrai/newaddy-redirects
