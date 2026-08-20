@@ -1,0 +1,167 @@
+redirectsOrigin = "config"
+plugins = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "/Users/ciscomacbook/Documents/Claude/Projects/newaddy-redirects"
+publishOrigin = "config"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+X-Frame-Options = "DENY"
+Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+for = "/assets/*"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+from = "/"
+to = "/app.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+Host = ["newaddy.app", "www.newaddy.app", "newaaddy.app", "www.newaaddy.app"]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/"
+to = "/blog.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+Host = ["newaddy.blog", "www.newaddy.blog", "newaaddy.blog", "www.newaaddy.blog"]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/"
+to = "/live.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+Host = ["newaddy.live", "www.newaddy.live", "newaaddy.live", "www.newaaddy.live"]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/"
+to = "/shop.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+Host = ["newaddy.shop", "www.newaddy.shop", "newaaddy.shop", "www.newaaddy.shop"]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/"
+to = "/store.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+Host = ["newaddy.store", "www.newaddy.store", "newaaddy.store", "www.newaaddy.store"]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/"
+to = "/al-app.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+Host = ["addylife.app", "www.addylife.app"]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/"
+to = "/al-biz.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+Host = ["addylife.biz", "www.addylife.biz"]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/"
+to = "/al-online.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+Host = ["addylife.online", "www.addylife.online"]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/"
+to = "/al-site.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+Host = ["addylife.site", "www.addylife.site"]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/"
+to = "/al-store.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+Host = ["addylife.store", "www.addylife.store"]
+
+[redirects.headers]

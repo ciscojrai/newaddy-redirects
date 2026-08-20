@@ -4,14 +4,14 @@ WIP splash for Newaddy and AddyLife TLDs. Each plays a short clip, then
 sends the visitor to the matching site:
 
 - **Newaddy** TLDs → **https://newaddy.ai/** (FavAtlas globe — site 1)
-- **AddyLife** TLDs → **https://addylife.netlify.app/** (chat + globe — site 2)
+- **AddyLife** TLDs → **https://addylife.app/** (chat + globe — site 2)
 
 **Do not attach `newaddy.ai` to this Netlify site.** That hostname is the
 Newaddy globe at the `favatlas` Netlify project. If `.ai` is added here,
 visitors never reach the map.
 
-**Do not attach `addylife.netlify.app` here either** — that is the AddyLife
-app. Splash stays on the AddyLife TLDs so the clip can play first, then
+**Do not attach `addylife.app` here either** — that is the AddyLife
+app. Splash stays on the AddyLife TLDs (.biz, .online, .site, .store) so the clip can play first, then
 the visitor lands on AddyLife (not Newaddy).
 
 ## Newaddy

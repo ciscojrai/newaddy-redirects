@@ -4,7 +4,7 @@
   var DEST =
     (meta && meta.getAttribute("content")) ||
     (host.indexOf("addylife") !== -1
-      ? "https://addylife.netlify.app/"
+      ? "https://addylife.app/"
       : "https://newaddy.ai/");
   var FALLBACK_MS = 10000;
   var sent = false;
