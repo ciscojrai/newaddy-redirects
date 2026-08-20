@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 32" fill="none">
+  <defs>
+    <linearGradient id="newaddyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00c2ff" />
+      <stop offset="30%" stop-color="#00d8f6" />
+      <stop offset="55%" stop-color="#00f2fe" />
+      <stop offset="80%" stop-color="#05f8b4" />
+      <stop offset="100%" stop-color="#00ff87" />
+    </linearGradient>
+  </defs>
+  <text
+    x="0"
+    y="24"
+    font-family="Inter, 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    font-size="26"
+    font-weight="500"
+    letter-spacing="-0.015em"
+    fill="url(#newaddyGrad)"
+  >newaddy.ai</text>
+</svg>

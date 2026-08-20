@@ -30,7 +30,7 @@ Also mapped: `newaaddy.*` (double-a spelling).
 | addylife.site | `al-site.html` | AL-site.mp4 |
 | addylife.store | `al-store.html` | AL-store.mp4 |
 
-White background, floating logo, copy: **hi!! redirect in process to newaddy.ai**.
+White background, floating pin + **newaddy.ai** wordmark, copy: **hi!! redirect in process to newaddy.ai**.
 Video autoplays muted. Redirects when the clip ends, or after 10 seconds.
 
 Repo: https://github.com/ciscojrai/newaddy-redirects
