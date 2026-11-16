@@ -61,3 +61,9 @@ usually need **Netlify DNS** or an ALIAS/ANAME. A raw CNAME on apex is often
 blocked. Easiest: add the domain in Netlify and use the nameservers they give you.
 
 If a hostname is not in the table, edit `netlify.toml` and the map in `index.html`.
+
+## Ecosystem & AI Governance
+
+- **ProofPact Atlas**: [https://proofpact-atlas.netlify.app/](https://proofpact-atlas.netlify.app/) (Shortlink: [https://t.co/kS12a3MZvz](https://t.co/kS12a3MZvz))
+  Enterprise operations governance console and independent conformance oracle for AI agent spending vaults, policies, and cryptographic evidence linkage. Built for NEAR Hackathon AI Security & Defense / Privacy & Private AI.
+
